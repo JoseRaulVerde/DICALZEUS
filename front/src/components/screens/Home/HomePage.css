@@ -1,0 +1,59 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerimg {
+  width: 100%;
+}
+h1 {
+  position: absolute;
+  color: rgb(103, 179, 27);
+  font-size: 200px;
+  font-family: cursive;
+}
+h2{
+    font-size: 50px;
+    padding: 20px;
+    color: rgb(103, 179, 27);
+    font-size: 50px;
+    font-family: cursive;
+}
+h3{
+    color: azure;
+}
+span{
+    color: antiquewhite;
+}
+.informationCard {
+  margin: 25px;
+}
+.certificationsSponsors {
+  height: 350px;
+  background-color: rgb(177 233 214 / 87%);
+  border-radius: 50px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 25px 0px 25px;
+  align-items: center;
+}
+.Certificacions {
+  display: flex;
+}
+.certification {
+  height: 150px;
+}
+.sponsors {
+  height: 100px;
+}
+.footer{
+    background-color: black;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
