@@ -1,0 +1,54 @@
+CREATE DATABASE PetSitters;
+
+use PetSitters
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT,
+    Name VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50),
+    Email VARCHAR(50),
+    Phone VARCHAR(10) NOT NULL,
+    Password VARCHAR(25) NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE State (
+    id INT AUTO_INCREMENT,
+    Name VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+INSERT INTO State (Name)
+VALUES ('Sinaloa'),('Nuevo Leon')
+
+CREATE TABLE City (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    state_id INT, 
+    FOREIGN KEY (state_id) REFERENCES state(id) 
+);
+
+INSERT INTO City (Name, state_id)
+VALUES ('Abasolo', 2),
+       ('Allende', 2),
+       ('Culiacan', 1),
+       ('Mazatlan', 1 );
+
+CREATE TABLE PetSitter (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    city_id INT, 
+    Name VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50),
+    Email VARCHAR(50),
+    Phone VARCHAR(10),
+    PhotoURL VARCHAR(255),
+    Age INT,
+    FOREIGN KEY (city_id) REFERENCES city(id) 
+);
+
+INSERT INTO PetSitter (Name, city_id, LastName, Email, Phone, PhotoURL, Age)
+VALUES ('Juan', 1, 'Pérez', 'juan@example.com', '1234567890', 'https://th.bing.com/th/id/OIP.ui91VFd2UatBS_V9Y6oNfwHaE8?rs=1&pid=ImgDetMain', 30),
+       ('María', 2, 'González', 'maria@example.com', '9876543210', 'https://cocktail.pe/wp-content/uploads/2020/06/unnamed-3.jpg', 25),
+       ('Pedro', 3, 'Martínez', 'pedro@example.com', '5555555555', 'https://thumbs.dreamstime.com/b/hombre-joven-que-toma-el-selfie-en-la-ciudad-52341838.jpg', 35),
+       ('Ana', 3, 'López', 'ana@example.com', '1112223333', 'https://i.pinimg.com/originals/67/2d/2c/672d2cf461ba83f09698038d60e4eb05.jpg', 28),
+       ('Carlos', 2, 'García', 'carlos@example.com', '4445556666', 'https://th.bing.com/th/id/OIP.pRM-ETw2paRZyJHpia3vhQHaEK?w=626&h=352&rs=1&pid=ImgDetMain', 40),
+       ('Laura', 1, 'Hernández', 'laura@example.com', '7778889999', 'https://th.bing.com/th/id/OIP.LmETWhJSeyT5T6KKv0CWVgHaHX?w=700&h=697&rs=1&pid=ImgDetMain', 35);
+       ('Sofía', 4, 'Díaz', 'sofia@example.com', '1111111111', 'https://th.bing.com/th/id/OIP.5q1sdd5jA8OFh9sbOWxYYAHaEk?rs=1&pid=ImgDetMain', 32),
+       ('Miguel', 4, 'Rodríguez', 'miguel@example.com', '2222222222', 'https://th.bing.com/th/id/R.7a8affefaf38c7d45e0a60c9e6df768a?rik=gowGb%2fJ8U5L%2fYw&riu=http%3a%2f%2fwww.galileo.edu%2fesip%2ffiles%2f2014%2f11%2ftema03.jpg&ehk=%2bfYgshFFSR0YRWIShUyeMv892No%2fiUqQT5CP%2fCouzMg%3d&risl=&pid=ImgRaw&r=0', 27);

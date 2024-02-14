@@ -13,7 +13,7 @@ return (
               <a href="/">Inicio</a>
             </li>
             <li>
-            <a href="/contact">Buscar cuidador</a>
+            <a href="/searchCrarer">Buscar cuidador</a>
             </li>
             <li>
               <a href="/createAcount">Crear Cuenta</a>

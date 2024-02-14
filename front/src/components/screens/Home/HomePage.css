@@ -33,6 +33,7 @@ span{
   height: 350px;
   background-color: rgb(177 233 214 / 87%);
   border-radius: 50px;
+  margin-bottom: 100px;
 }
 
 .images {
@@ -50,10 +51,4 @@ span{
 .sponsors {
   height: 100px;
 }
-.footer{
-    background-color: black;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
